@@ -8,7 +8,7 @@
  * Controller of the tischkickerFrontendApp
  */
 angular.module('tischkickerFrontendApp')
-    .controller('MainCtrl', function ($scope) {
+    .controller('MainCtrl', function ($scope, GoalsService) {
         $scope.scoreboard = {
             heim: {
                 teamname: 'Die Krabbler',
@@ -21,4 +21,13 @@ angular.module('tischkickerFrontendApp')
                 speed: '120 kmh'
             }
         };
+    
+        function getGoals() {
+            GoalsService.get({}, function (response) {
+                console.log(response);
+            });
+        }
+    
+        getGoals();
+    
     });
