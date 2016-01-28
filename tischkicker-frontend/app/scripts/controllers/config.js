@@ -8,7 +8,7 @@
  * Controller of the tischkickerFrontendApp
  */
 angular.module('tischkickerFrontendApp')
-  .controller('AboutCtrl', function () {
+  .controller('ConfigCtrl', function () {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
