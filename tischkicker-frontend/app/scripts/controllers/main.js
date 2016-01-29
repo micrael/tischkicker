@@ -13,18 +13,19 @@ angular.module('tischkickerFrontendApp')
             heim: {
                 teamname: 'Die Krabbler',
                 goal: '4',
-                speed: '233 kmh'
+                speed: '233 km/h'
             },
             gast: {
                 teamname: 'Sandy & Co.',
                 goal: '10',
-                speed: '120 kmh'
+                speed: '120 km/h'
             }
         };
     
         function getGoals() {
             GoalsService.get({}, function (response) {
                 console.log(response);
+                console.log(JSON.stringify(response));
             });
         }
     
